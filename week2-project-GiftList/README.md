@@ -2,7 +2,7 @@
 
 I coded the check if the name is in the list with the usage of the Merkle Tree structure.
 
-1) I created an input field where the user fills in his number.
+1) I created an input field where the user fills in his name.
 
 2) In the next step, the program will look for the name index in the list, creates a Merkle Tree from the list and a proof for the provided name. Name and proof are sent to the server.
 
