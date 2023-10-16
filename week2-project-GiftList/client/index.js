@@ -11,15 +11,21 @@ const rl = readline.createInterface({
 });
 
 async function main() {
-  // TODO: how do we prove to the server we're on the nice list? 
+  // DONE: how do we prove to the server we're on the nice list? 
   rl.question('Please enter your name: ', async (name) => {
     try {
+      const index = niceList.findIndex(n => n === name);
+      const merkleTree = new MerkleTree(niceList);
+      const proof = merkleTree.getProof(index);
+
       const { data: gift } = await axios.post(`${serverUrl}/gift`, {
-        // TODO: add request body parameters here!
-        name
+        // DONE: add request body parameters here!
+        name,
+        proof
       });
 
       console.log({ gift });
+
     } catch (error) {
       console.error('An error occurred:', error.message);
     } finally {
