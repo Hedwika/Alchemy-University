@@ -1,3 +1,12 @@
+# Ethereum Block Explorer - my solution
+I created the simple block explorer with the usage of Alchemy SDK.
+
+- I use `getBlock()` to get block number, transactions list, miner address, and timestamp. I also use `getGasPrice()` the best guess of the current gas price to use in a transaction.
+
+- I keep all the block info in the array called `blocks`.
+
+- Block number and miner address is just displayed, number of transactions in counted as an array length, block mining time is counted from the timestamp and to get the gas price from BigNumber format I use ethers.
+
 # Ethereum Block Explorer
 
 The lessons this week covered the Ethereum JSON-RPC API and the `ethers.js` library giving us the ability to query the Ethereum blockchain and make transactions!
