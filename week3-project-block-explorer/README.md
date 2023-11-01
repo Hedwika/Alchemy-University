@@ -5,6 +5,8 @@ I created the simple block explorer with the usage of Alchemy SDK.
 
 - I keep all the block info in the array called `blocks`.
 
+- `getBlock()` is called every second.
+
 - Block number and miner address is just displayed, number of transactions in counted as an array length, block mining time is counted from the timestamp and to get the gas price from BigNumber format I use ethers.
 
 # Ethereum Block Explorer
